@@ -1,0 +1,37 @@
+#ip 5
+addi 5 16 5 rjmp +16
+seti 1 8 4  r[4] = 1
+seti 1 5 3  r[3] = 1
+mulr 4 3 1  r[1] = r[4] * r[3]
+eqrr 1 2 1  r[1] = r[1] == r[2]
+addr 1 5 5  rjmp +r[1]
+addi 5 1 5  rjmp +1
+addr 4 0 0  r[0] = r[4] + r[0]
+addi 3 1 3  r[3] = r[3] + 1
+gtrr 3 2 1  r[1] = r[3] > r[2]
+addr 5 1 5  rjmp +r[1]
+seti 2 5 5  jmp 2
+addi 4 1 4  r[4] = r[4] + 1
+gtrr 4 2 1  r[1] = r[4] > r[2]
+addr 1 5 5  rjmp +r[1]
+seti 1 2 5  jmp 1
+mulr 5 5 5  rjmp *5 (halt)
+addi 2 2 2  r[2] = r[2] + 2
+mulr 2 2 2  r[2] = r[2] * r[2]
+mulr 5 2 2  r[2] = r[2] * 19
+muli 2 11 2 r[2] = r[2] * 11
+addi 1 8 1  r[1] = r[1] + 9
+mulr 1 5 1  r[1] = r[1] * 22
+addi 1 18 1 r[1] = r[1] + 18
+addr 2 1 2  r[2] = r[2] + r[1]
+addr 5 0 5  rjmp +r[0]
+seti 0 7 5  jmp 0
+setr 5 0 1  r[1] = 27
+mulr 1 5 1  r[1] = r[1] * 28
+addr 5 1 1  r[1] = r[1] + 29
+mulr 5 1 1  r[1] = r[1] * 30
+muli 1 14 1 r[1] = r[1] * 14
+mulr 1 5 1  r[1] = r[1] * 32
+addr 2 1 2  r[2] = r[2] + r[1]
+seti 0 0 0  r[0] = 0
+seti 0 9 5  jmp 0
