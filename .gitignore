@@ -3,3 +3,7 @@ target/
 .yarn-integrity
 node_modules
 *.code-workspace
+
+# Added by cargo
+
+/target
